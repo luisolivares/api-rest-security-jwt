@@ -1,11 +1,11 @@
-# üöÄ Proyecto JWT con Spring Boot y MySQL
+# ?? Proyecto JWT con Spring Boot y MySQL
 
-Este proyecto es una **API REST** desarrollada con **Spring Boot 3** con **Spring Security**, que implementa **autenticaci√≥n y autorizaci√≥n basada en JWT (JSON Web Token)**.  
-Se ejecuta completamente en contenedores Docker, utilizando **MySQL** como base de datos y **phpMyAdmin** para la administraci√≥n visual.
+Este proyecto es una **API REST** desarrollada con **Spring Boot 3** con **Spring Security**, que implementa **autenticaci®Æn y autorizaci®Æn basada en JWT (JSON Web Token)**.  
+Se ejecuta completamente en contenedores Docker, utilizando **MySQL** como base de datos y **phpMyAdmin** para la administraci®Æn visual.
 
 ---
 
-## üß© Tecnolog√≠as utilizadas
+## ?? Tecnolog®™as utilizadas
 
 - **Java 17**
 - **Spring Boot 3**
@@ -18,9 +18,9 @@ Se ejecuta completamente en contenedores Docker, utilizando **MySQL** como base 
 
 ---
 
-## üê≥ Requisitos previos
+## ?? Requisitos previos
 
-Solo necesitas tener instalados en tu m√°quina:
+Solo necesitas tener instalados en tu m®¢quina:
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
@@ -29,43 +29,43 @@ No se requiere tener instalado Java, Maven y MySQL localmente.
 
 ---
 
-## üöÄ C√≥mo ejecutar el proyecto
+## ?? C®Æmo ejecutar el proyecto
 
 1. Clona o descarga este repositorio.
-2. En la ra√≠z del proyecto (donde est√° el archivo `docker-compose.yml`), ejecuta:
+2. En la ra®™z del proyecto (donde est®¢ el archivo `docker-compose.yml`), ejecuta:
 
 ```bash
 docker compose up --build
 ```
 
 
-3. Espera a que Docker descargue las im√°genes y construya los contenedores.
+3. Espera a que Docker descargue las im®¢genes y construya los contenedores.
 
-4. Una vez iniciado, la API estar√° disponible en:
+4. Una vez iniciado, la API estar®¢ disponible en:
 
-üëâ http://localhost:8080
+?? http://localhost:8080
 
 Y phpMyAdmin en:
 
-üëâ http://localhost:8082/phpmyadmin
+?? http://localhost:8082/phpmyadmin
 
 Usuario: root
-Contrase√±a: admin
+Contrase?a: admin
 
-5. Acceder a la aplicaci√≥n
+5. Acceder a la aplicaci®Æn
 
-- **API Base** ‚Üí http://localhost:8080/api-rest-security-jwt
+- **API Base** °˙ http://localhost:8080/api-rest-security-jwt
 
-- **API Base para verificar funcionamiento** ‚Üí http://localhost:8080/api-rest-security-jwt/api/v1/healthz
+- **API Base para verificar funcionamiento** °˙ http://localhost:8080/api-rest-security-jwt/api/v1/healthz
 
-- **Swagger UI** ‚Üí http://localhost:8080/api-rest-security-jwt/swagger-ui/index.html
+- **Swagger UI** °˙ http://localhost:8080/api-rest-security-jwt/swagger-ui/index.html
 
-- **phpMyAdmin** ‚Üí http://localhost:8082/phpmyadmin
+- **phpMyAdmin** °˙ http://localhost:8082/phpmyadmin
 
 - **Usuario:** root
-- **Contrase√±a:** admin
+- **Contrase?a:** admin
 
-- **Consola H2** ‚Üí http://localhost:8080/api-rest-security-jwt/h2-console
+- **Consola H2** °˙ http://localhost:8080/api-rest-security-jwt/h2-console
 
 - **Driver:** org.h2.Driver
 
@@ -77,20 +77,19 @@ Contrase√±a: admin
 
 ---
 
+## ??? Configuraci®Æn de la base de datos 
 
-üóÉÔ∏è Configuraci√≥n de la base de datos
+El contenedor de MySQL se levanta autom®¢ticamente con los siguientes valores:
 
-El contenedor de MySQL se levanta autom√°ticamente con los siguientes valores:
 
-Variable	Valor
-MYSQL_DATABASE	jwt_app
-MYSQL_ROOT_PASSWORD	admin
-Usuario	root
-Puerto	3306
+- **MYSQL_DATABASE:** jwt_app
+- **MYSQL_ROOT_PASSWORD:** admin
+- **Usuario:** root
+- **Puerto:** 3306
 
 Los datos se almacenan en un volumen Docker llamado mysql_data para persistencia.
 
-‚öôÔ∏è Comandos √∫tiles
+## ?? Comandos ®≤tiles
 
 Levantar el entorno:
 
@@ -110,23 +109,26 @@ Detener los contenedores:
 docker compose down
 ```
 
-Reiniciar el entorno desde cero (incluyendo vol√∫menes):
+Reiniciar el entorno desde cero (incluyendo vol®≤menes):
 
 ```bash
 docker compose down -v
 docker compose up --build
 ```
 
-üß† Notas adicionales
+---
+
+## ?? Notas adicionales
 
 El proyecto usa un Dockerfile multietapa: primero compila con Maven y luego ejecuta con JDK 17.
 
-Todos los servicios se ejecutan en una red interna de Docker creada autom√°ticamente por Compose.
+Todos los servicios se ejecutan en una red interna de Docker creada autom®¢ticamente por Compose.
 
-Si la aplicaci√≥n define datos iniciales (en data.sql o schema.sql), se cargan al iniciar el contenedor MySQL.
+Si la aplicaci®Æn define datos iniciales (en data.sql o schema.sql), se cargan al iniciar el contenedor MySQL.
 
-Se creo un usuario inicial cuyo email es **email@email.com** y contrase√±a es **admin123**, en el cual se puede generar el primer token del sistema en el endpont de üëâ **/api/v1/auth/token**
+Se creo un usuario inicial cuyo email es **email@email.com** y contrase?a es **admin123**, en el cual se puede generar el primer token del sistema en el endpont de ?? **/api/v1/auth/token**
 
-üì¶ Autor: Proyecto base generado con Spring Boot y configurado por ***Luis Alberto Olivares Pe√±a***.
+## ?? Autor 
+Proyecto base generado con Spring Boot y configurado por ***Luis Alberto Olivares Pe?a***.
 
-üìÖ Versi√≥n: 1.0.0
+## ?? Versi®Æn: 1.0.0
